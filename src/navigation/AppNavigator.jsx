@@ -27,10 +27,26 @@ const AppNavigator = () => {
   }, []);
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName={isLoggedIn ? 'Home' : 'Main'}>
+      <Stack.Navigator initialRouteName="Splash">
         <Stack.Screen
           name="Splash"
           component={Splash}
+          options={{
+            headerShown: false,
+          }}
+        />
+
+        <Stack.Screen
+          name="Signin"
+          component={Signin}
+          options={{
+            headerShown: false,
+          }}
+        />
+
+        <Stack.Screen
+          name="Signup"
+          component={Signup}
           options={{
             headerShown: false,
           }}
@@ -43,6 +59,7 @@ const AppNavigator = () => {
             headerShown: false,
           }}
         />
+
         <Stack.Screen name="ProductDetail" component={productDetail} />
       </Stack.Navigator>
     </NavigationContainer>

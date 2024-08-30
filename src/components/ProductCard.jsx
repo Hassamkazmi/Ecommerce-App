@@ -73,12 +73,14 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 5,
     width: '100%',
+    color: COLORS.dark,
   },
   productBrand: {
     textAlign: 'center',
     fontSize: 16,
     color: 'gray',
     marginBottom: 5,
+    color: COLORS.dark,
   },
   productPrice: {
     textAlign: 'center',

@@ -87,11 +87,13 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     marginVertical: 10,
+    color: COLORS.dark,
   },
   productBrand: {
     fontSize: 18,
     color: 'gray',
     marginBottom: 10,
+    color: COLORS.dark,
   },
   productPrice: {
     fontSize: 22,

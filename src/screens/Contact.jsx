@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import React from 'react';
 import MainBtn from '../common/Mainbtn';
+import COLORS from '../common/Color';
 
 const {width, height} = Dimensions.get('window');
 
@@ -20,13 +21,18 @@ const Contact = () => {
         resizeMode="cover"
       />
       <View style={styles.contact}>
-        <Text>Contact US</Text>
-        <TextInput placeholder="Subject" style={styles.input} />
+        <Text style={{color: COLORS.dark, fontWeight: 'bold'}}>Contact US</Text>
+        <TextInput
+          placeholder="Subject"
+          style={styles.input}
+          placeholderTextColor={COLORS.dark}
+        />
         <TextInput
           placeholder="Message"
           multiline={true}
           numberOfLines={8}
           style={styles.message}
+          placeholderTextColor={COLORS.dark}
         />
         <MainBtn titletext="Submit" />
       </View>
@@ -54,6 +60,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     paddingLeft: 20,
     marginRight: 10,
+    color: COLORS.dark,
   },
   message: {
     width: '98%',
@@ -63,5 +70,6 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     marginRight: 10,
     textAlignVertical: 'top',
+    color: COLORS.dark,
   },
 });

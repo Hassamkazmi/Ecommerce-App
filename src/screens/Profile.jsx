@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {View, Text, Button} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {useNavigation} from '@react-navigation/native';
+import COLORS from '../common/Color';
 
 const Profile = () => {
   const [userName, setUserName] = useState('');
@@ -24,7 +25,7 @@ const Profile = () => {
   }, []);
 
   const logout = async () => {
-    navigation.navigate('signin');
+    navigation.navigate('Signin');
   };
 
   const deleteAccount = async () => {
@@ -54,6 +55,8 @@ const styles = {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 20,
+    color: COLORS.dark,
+    fontWeight: 'bold',
   },
 };
 

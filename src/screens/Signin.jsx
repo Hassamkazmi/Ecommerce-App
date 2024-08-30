@@ -1,8 +1,9 @@
-import {StyleSheet, Text, View, TextInput, Alert} from 'react-native';
+import {StyleSheet, Text, View, TextInput, Alert, Image} from 'react-native';
 import React, {useState} from 'react';
 import MainBtn from '../common/Mainbtn';
 import {useNavigation} from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import COLORS from '../common/Color';
 
 const Signin = () => {
   const [email, setEmail] = useState('');
@@ -34,6 +35,13 @@ const Signin = () => {
 
   return (
     <View style={styles.container}>
+      <View style={styles.logoimage}>
+        <Image
+          style={styles.image}
+          source={require('../images/107.jpg')}
+          resizeMode="cover"
+        />
+      </View>
       <Text style={styles.title}>Login</Text>
 
       <TextInput
@@ -41,6 +49,7 @@ const Signin = () => {
         style={styles.input}
         value={email}
         onChangeText={txt => setEmail(txt)}
+        placeholderTextColor={COLORS.dark}
       />
 
       <TextInput
@@ -49,6 +58,7 @@ const Signin = () => {
         value={password}
         onChangeText={txt => setPassword(txt)}
         secureTextEntry={true}
+        placeholderTextColor={COLORS.dark}
       />
 
       <MainBtn titletext={'Login'} onPress={login} />
@@ -74,7 +84,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     color: '#000',
     alignSelf: 'center',
-    marginTop: 100,
+    marginTop: 50,
     fontWeight: '800',
     marginBottom: 50,
   },
@@ -86,6 +96,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     alignSelf: 'center',
     paddingLeft: 20,
+    color: '#000',
   },
   orLogin: {
     alignSelf: 'center',
@@ -94,5 +105,15 @@ const styles = StyleSheet.create({
     textDecorationLine: 'underline',
     fontSize: 20,
     color: '#000',
+  },
+  image: {
+    height: 100,
+    width: 100,
+  },
+  logoimage: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
   },
 });

@@ -56,7 +56,8 @@ const BottomTab = () => {
             <View
               style={[
                 styles.iconContainer,
-                {backgroundColor: COLORS.red},
+                {backgroundColor: COLORS.orange},
+
                 {padding: 14},
                 {position: 'absolute'},
                 {

@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   },
   categoryText: {
     fontSize: 18,
-    color: COLORS.gray,
+    color: COLORS.dark,
   },
   underline: {
     borderBottomColor: COLORS.primary,
