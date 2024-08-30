@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
 import React, {useEffect} from 'react';
 import {useNavigation} from '@react-navigation/native';
 
@@ -11,7 +11,14 @@ const Splash = () => {
   }, []);
   return (
     <View style={styles.container}>
-      <Text style={styles.logo}>Splash</Text>
+      <View style={styles.logoimage}>
+        <Image
+          style={styles.image}
+          source={require('../images/111.png')}
+          resizeMode="cover"
+        />
+      </View>
+      <Text style={styles.logo}>Kazmi</Text>
     </View>
   );
 };
@@ -29,5 +36,15 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontSize: 30,
     textAlign: 'center',
+  },
+  image: {
+    height: 100,
+    width: 100,
+  },
+  logoimage: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    alignSelf: 'center',
   },
 });
